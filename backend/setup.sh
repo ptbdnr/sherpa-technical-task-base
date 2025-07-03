@@ -26,7 +26,7 @@ if [ ! -f .env ]; then
 AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 AZURE_OPENAI_KEY=your-api-key-here
 AZURE_OPENAI_DEPLOYMENT=gpt-4o
-AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-large
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-small
 
 # Optional Configuration
 OPENAI_MODEL_TEMPERATURE=0.7
