@@ -247,3 +247,6 @@ checkpoints/
 local/
 dev/
 test_uploads/
+
+# npm packages
+# **/node_modules/
