@@ -1,5 +1,7 @@
 # Sherpa Technical Task
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## 📌 Context
 
 At Sherpa, we build AI-enabled software for management consulting and professional services firms. Our applications frequently process complex, unstructured data from documents such as PDFs, Word files, and presentations. Our solutions must be secure, scalable, and tailored for enterprise-grade reliability.
