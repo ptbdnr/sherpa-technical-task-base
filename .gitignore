@@ -249,4 +249,4 @@ dev/
 test_uploads/
 
 # npm packages
-# **/node_modules/
+**/node_modules/
