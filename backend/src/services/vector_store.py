@@ -17,13 +17,13 @@ class VectorStore:
     Stores vectors in a single IndexFlatL2 index and maps them to text & metadata.
     """
     def __init__(self):
-        self.index_path = os.path.join(settings.vector_store_path, settings.faiss_index_file)
-        self.meta_path = os.path.join(settings.vector_store_path, settings.metadata_file)
+        self.index_path = os.path.join(settings.vector_store_dir, settings.faiss_index_file)
+        self.meta_path = os.path.join(settings.vector_store_dir, settings.metadata_file)
         self._ensure_storage_dir()
         self.index, self.metadata = self._load_or_init()
 
     def _ensure_storage_dir(self):
-        os.makedirs(settings.vector_store_path, exist_ok=True)
+        os.makedirs(settings.vector_store_dir, exist_ok=True, mode=0o777)
 
     def _load_or_init(self):
         if os.path.exists(self.index_path) and os.path.exists(self.meta_path):

@@ -38,10 +38,7 @@ DATABASE_URL=sqlite:///./data/database/chat_history.db
 
 # Data Paths (automatically set for Docker)
 UPLOAD_DIR=/app/data/uploads
-DOCUMENTS_DIR=/app/data/documents
 VECTOR_STORE_DIR=/app/data/vector_store
-LOGS_DIR=/app/data/logs
-DATABASE_DIR=/app/data/database
 EOF
     echo "✅ .env file created! Please edit it with your Azure OpenAI credentials."
     echo "📝 Edit .env file to add your Azure OpenAI endpoint and API key"

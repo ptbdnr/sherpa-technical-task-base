@@ -276,10 +276,7 @@ DATABASE_URL=sqlite:///./data/database/chat_history.db
 
 # Data paths (automatically set in Docker)
 UPLOAD_DIR=/app/data/uploads
-DOCUMENTS_DIR=/app/data/documents
-VECTOR_STORE_DIR=/app/data/vector_store
-LOGS_DIR=/app/data/logs
-DATABASE_DIR=/app/data/database
+VECTOR_STORE_DIR=app/data/vector_store
 ```
 
 ## 📊 Source References
