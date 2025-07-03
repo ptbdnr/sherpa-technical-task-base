@@ -22,13 +22,17 @@ export function useChatStream(sessionId: string, onMessageSent?: () => void) {
       // Show thinking state
       setIsThinking(true);
 
-      const resp = await fetch(`/api/chat/message?session_id=${sessionId}`, {
+      const resp = await fetch(`/chat/message?session_id=${sessionId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: content })
+      }).catch((error) => {
+        console.error("Error sending message:", error);
+        setIsThinking(false);
+        return;
       });
 
-      if (!resp.body) {
+      if (!resp || !resp.body) {
         setIsThinking(false);
         return;
       }
@@ -133,7 +137,7 @@ export function useChatStream(sessionId: string, onMessageSent?: () => void) {
 
   const loadHistory = useCallback(async () => {
     try {
-      const response = await fetch(`/api/chat/sessions/${sessionId}/history`);
+      const response = await fetch(`/chat/sessions/${sessionId}/history`);
       if (response.ok) {
         const data = await response.json();
         const msgs = (data.messages ?? []).map((m: any) => ({

@@ -63,8 +63,9 @@ docker-compose up
 ```bash
 cd frontend
 ```
-1. Install the relevant packages
+1. Initial Set Up (Creating the blank .env and relevant instalations using NPM)
 ```bash
+./setup.sh
 npm install
 ```
 2. Build the Docker container
